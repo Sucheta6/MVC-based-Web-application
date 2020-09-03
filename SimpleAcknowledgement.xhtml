@@ -1,0 +1,36 @@
+<!-- 
+Aditya Varma Vetukuri
+Sai Ruchieatha Maanvi Thibirisetti
+Sai Venkata Sucheta Pallempati
+Kaushik Gedela
+Jeevan Mamillapalli
+-->
+
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+<title>Simple Acknowledgement</title>	
+</h:head>
+<h:body>
+
+<h1><b> Thank you for completing the survey </b> </h1>
+<br />
+<!-- Calling the Survey bean and by using te student object printing its values -->
+<p>Student Name : #{survey.student.firstname} #{survey.student.lastname}</p>
+<!--  printing the deviation and mean -->
+<p> <b>Standard Deviation is:</b>  #{survey.wr.deviation}</p>
+<p> <b>Mean is:</b>  #{survey.wr.mean}</p>
+<br />
+
+<p>Information entered on the survey form has been saved successfully</p>
+<br />
+
+<!-- Redirection link back to home page -->
+<h:button value="View Survey Details" outcome="ListSurvey.xhtml"></h:button>
+<h:button value="Go back to Main menu" outcome="index.xhtml"></h:button>
+</h:body>
+</html>
